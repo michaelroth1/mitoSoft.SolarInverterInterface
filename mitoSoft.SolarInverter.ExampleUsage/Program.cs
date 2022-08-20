@@ -24,9 +24,9 @@ today = ValueConverter.Convert<KiloWattHour>(today);
 sma.Disconnect();
 
 Console.WriteLine($"Status: {status} {actionText}");
-Console.WriteLine($"Total: {total.Scalar.ToString("0.##")} {total.Unit}");
-Console.WriteLine($"Today: {today.Scalar.ToString("0.##")} {today.Unit}");
-Console.WriteLine($"Actual: {actual.Scalar.ToString("0.##")} {actual.Unit}");
+Console.WriteLine($"Total: {total.Scalar:0.##} {total.Unit}");
+Console.WriteLine($"Today: {today.Scalar:0.##} {today.Unit}");
+Console.WriteLine($"Actual: {actual.Scalar:0.##} {actual.Unit}");
 
 Console.Write("Press any key to continue . . . ");
 Console.ReadKey(true);
