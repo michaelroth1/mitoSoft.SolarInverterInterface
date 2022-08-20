@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\mitoSoft.SolarInverterInterface\mitoSoft.SolarInverter.csproj" />
+    <ProjectReference Include="..\mitoSoft.SolarInverter\mitoSoft.SolarInverter.csproj" />
   </ItemGroup>
 
 </Project>
