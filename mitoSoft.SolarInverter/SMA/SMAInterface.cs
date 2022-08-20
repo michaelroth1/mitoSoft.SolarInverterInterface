@@ -45,14 +45,14 @@ namespace mitoSoft.SolarInverter.SMA
         public int Actual => this.ReadWord(30775);
 
         /// <summary>
-        /// Total yield in watt hours
-        /// </summary>
-        public long Total => this.ReadDoubleWord(30513);
-
-        /// <summary>
         /// Todays yield in watt hours
         /// </summary>
         public int Today => int.Parse(this.ReadDoubleWord(30517).ToString());
+
+        /// <summary>
+        /// Total yield in watt hours
+        /// </summary>
+        public long Total => this.ReadDoubleWord(30513);
 
         public long ReadDoubleWord(int address)
         {

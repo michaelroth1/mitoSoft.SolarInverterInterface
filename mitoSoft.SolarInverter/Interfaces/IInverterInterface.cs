@@ -10,8 +10,8 @@
 
         public int Actual { get; }
 
-        public long Total { get; }
-
         public int Today { get; }
+
+        public long Total { get; }
     }
 }
