@@ -1,11 +1,12 @@
 ﻿using EasyModbus;
 using mitoSoft.SolarInverter.Extensions;
+using mitoSoft.SolarInverter.Interfaces;
 using mitoSoft.SolarInverter.SMA.Eums;
 using System.Collections;
 
 namespace mitoSoft.SolarInverter.SMA
 {
-    public class SMAInterface
+    public class SMAInterface : IInverterInterface
     {
         private readonly ModbusClient _modbusClient;
 
@@ -38,20 +39,20 @@ namespace mitoSoft.SolarInverter.SMA
             return (RecommendedAction)action;
         }
 
-        public int ReadActualProducedValueInWatt()
-        {
-            return ReadWord(30775);
-        }
+        /// <summary>
+        /// Produced value in watt
+        /// </summary>
+        public int Actual => this.ReadWord(30775);
 
-        public long ReadTotalInWattHours()
-        {
-            return ReadDoubleWord(30513);
-        }
+        /// <summary>
+        /// Total yield in watt hours
+        /// </summary>
+        public long Total => this.ReadDoubleWord(30513);
 
-        public long ReadTodayInWattHours()
-        {
-            return ReadDoubleWord(30517);
-        }
+        /// <summary>
+        /// Todays yield in watt hours
+        /// </summary>
+        public int Today => int.Parse(this.ReadDoubleWord(30517).ToString());
 
         public long ReadDoubleWord(int address)
         {

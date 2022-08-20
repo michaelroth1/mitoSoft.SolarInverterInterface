@@ -2,10 +2,10 @@
 {
     public enum OverallStatus
     {
-        Fehler = 35,
-        Aus = 303,
+        Error = 35,
+        Off = 303,
         OK = 307,
-        Warnung = 455,
+        Warning = 455,
         Undefined = 0,
     }
 }

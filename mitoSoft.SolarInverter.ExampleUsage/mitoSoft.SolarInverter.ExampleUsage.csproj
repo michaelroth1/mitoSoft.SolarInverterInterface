@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DoenaSoft.UnitsOfMeasurement" Version="1.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\mitoSoft.SolarInverter\mitoSoft.SolarInverter.csproj" />
   </ItemGroup>
 
