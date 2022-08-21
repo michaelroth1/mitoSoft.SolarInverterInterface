@@ -11,7 +11,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/michaelroth1/mitoSoft.SolarInverterInterface</RepositoryUrl>
     <PackageTags>SMA Solar Inverter SunSpec Modbus</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
+    <Description>A package for modbus communication to SMA Solar inverters via sunspec interface</Description>
   </PropertyGroup>
 
   <ItemGroup>
