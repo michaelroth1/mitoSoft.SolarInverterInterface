@@ -1,4 +1,5 @@
 ﻿using DoenaSoft.UnitsOfMeasurement.SimpleUnits.Energies;
+using DoenaSoft.UnitsOfMeasurement.SimpleUnits.Powers;
 using DoenaSoft.UnitsOfMeasurement.Values;
 using mitoSoft.SolarInverter.SMA;
 using mitoSoft.SolarInverter.SMA.Eums;
@@ -20,6 +21,7 @@ var today = new Value((decimal)sma.Today, "Wh");
 var actual = new Value((decimal)sma.Actual, "W");
 total = ValueConverter.Convert<KiloWattHour>(total);
 today = ValueConverter.Convert<KiloWattHour>(today);
+actual = ValueConverter.Convert<Watt>(actual);
 
 sma.Disconnect();
 
